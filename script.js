@@ -50,6 +50,7 @@
 
         const beginBtn = document.getElementById('begin-btn');
         const aboutBtn = document.getElementById('about-icon');
+        const aboutBtn2 = document.getElementById('about-icon-2');
         const homeBtn = document.getElementById('home-icon');
         const skillBtn = document.getElementById('skill-icon');
         const profileTile = document.getElementById('profile-tile');
@@ -118,6 +119,22 @@
                 setTimeout(() => {
                     skillTile.style.opacity = 1;
                     skillTile.style.up = '50%';
+                }, 100)
+            }, 500);
+        });
+
+        aboutBtn2.addEventListener('click', () => {
+
+            skillTile.style.display = 'none';
+
+            setTimeout(() => {
+                aboutTile.style.display = "block";
+                aboutTile.style.opacity = 0;
+                aboutTile.style.top = '60%';
+
+                setTimeout(() => {
+                    aboutTile.style.opacity = 1;
+                    aboutTile.style.top = '50%';
                 }, 100)
             }, 500);
         });
