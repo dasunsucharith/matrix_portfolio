@@ -59,6 +59,7 @@
         const portfolioBtn = document.getElementById('portfolio-icon');
         const portfolioTile = document.getElementById('portfolio-section-tile');
         const skillBtn2 = document.getElementById('skill-icon-2');
+        const viewWorkBtn = document.getElementById('view-work');
 
         beginBtn.addEventListener('click', () => {
             // Hide the button
@@ -158,6 +159,22 @@
             }, 500);
         });
 
+        viewWorkBtn.addEventListener('click', () => {
+
+            profileTile.style.display = 'none';
+
+            setTimeout(() => {
+                portfolioTile.style.display = "block";
+                portfolioTile.style.opacity = 0;
+                portfolioTile.style.top = '60%';
+
+                setTimeout(() => {
+                    portfolioTile.style.opacity = 1;
+                    portfolioTile.style.top = '50%';
+                }, 100)
+            }, 500);
+        });
+
         skillBtn2.addEventListener('click', () => {
 
             portfolioTile.style.display = 'none';
@@ -174,6 +191,15 @@
             }, 500);
         });
 
+        function downloadPDF() {
+            var a = document.createElement('a');
+            a.href = 'assets/dasun_sucharith_cv.pdf';
+            a.download = 'dasun_sucharith_cv.pdf';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
 
+        document.getElementById('download-resume').addEventListener('click', downloadPDF);
     });
 
