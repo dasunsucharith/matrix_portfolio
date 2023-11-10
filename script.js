@@ -1,44 +1,44 @@
     document.addEventListener('DOMContentLoaded', () => {
-    const canvas = document.getElementById('matrix-canvas');
-    const context = canvas.getContext('2d');
+        const canvas = document.getElementById('matrix-canvas');
+        const context = canvas.getContext('2d');
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    window.addEventListener('resize', () => {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-    });
 
-    const katakana = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}';
-    const latin = katakana.split('');
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
 
-    const fontSize = 16;
-    const columns = canvas.width / fontSize;
+        const katakana = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}';
+        const latin = katakana.split('');
 
-    const rainDrops = [];
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
 
-    for (let x = 0; x < columns; x++) {
-    rainDrops[x] = 1;
-    }
+        const rainDrops = [];
 
-    const draw = () => {
-    context.fillStyle = 'rgba(0, 0, 0, 0.05)';
-    context.fillRect(0, 0, canvas.width, canvas.height);
-    
-    context.fillStyle = '#0f0'; // Green text
-    context.font = fontSize + 'px monospace';
-
-    for (let i = 0; i < rainDrops.length; i++) {
-        const text = latin[Math.floor(Math.random() * latin.length)];
-        context.fillText(text, i * fontSize, rainDrops[i] * fontSize);
-        
-        if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-        rainDrops[i] = 0;
+        for (let x = 0; x < columns; x++) {
+        rainDrops[x] = 1;
         }
-        rainDrops[i]++;
-    }
-    };
+
+        const draw = () => {
+        context.fillStyle = 'rgba(0, 0, 0, 0.05)';
+        context.fillRect(0, 0, canvas.width, canvas.height);
+        
+        context.fillStyle = '#0f0'; // Green text
+        context.font = fontSize + 'px monospace';
+
+        for (let i = 0; i < rainDrops.length; i++) {
+            const text = latin[Math.floor(Math.random() * latin.length)];
+            context.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+            
+            if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+            rainDrops[i] = 0;
+            }
+            rainDrops[i]++;
+        }
+        };
 
         setInterval(draw, 30);
         
@@ -56,6 +56,9 @@
         const profileTile = document.getElementById('profile-tile');
         const aboutTile = document.getElementById('about-section-tile');
         const skillTile = document.getElementById('skill-section-tile');
+        const portfolioBtn = document.getElementById('portfolio-icon');
+        const portfolioTile = document.getElementById('portfolio-section-tile');
+        const skillBtn2 = document.getElementById('skill-icon-2');
 
         beginBtn.addEventListener('click', () => {
             // Hide the button
@@ -138,6 +141,39 @@
                 }, 100)
             }, 500);
         });
+
+        portfolioBtn.addEventListener('click', () => {
+
+            skillTile.style.display = 'none';
+
+            setTimeout(() => {
+                portfolioTile.style.display = "block";
+                portfolioTile.style.opacity = 0;
+                portfolioTile.style.top = '60%';
+
+                setTimeout(() => {
+                    portfolioTile.style.opacity = 1;
+                    portfolioTile.style.top = '50%';
+                }, 100)
+            }, 500);
+        });
+
+        skillBtn2.addEventListener('click', () => {
+
+            portfolioTile.style.display = 'none';
+
+            setTimeout(() => {
+                skillTile.style.display = "block";
+                skillTile.style.opacity = 0;
+                skillTile.style.top = '60%';
+
+                setTimeout(() => {
+                    skillTile.style.opacity = 1;
+                    skillTile.style.top = '50%';
+                }, 100)
+            }, 500);
+        });
+
 
     });
 
