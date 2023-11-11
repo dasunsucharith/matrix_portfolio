@@ -404,7 +404,7 @@ html {
 	flex: 1; /* Each column takes up half the width */
 	padding: 20px;
 	box-sizing: border-box;
-  text-align: left;
+	text-align: left;
 }
 
 /* Matrix-themed styles for icons and text */
@@ -414,34 +414,107 @@ html {
 }
 
 .contact-details p {
-  color: #0f0;
-  font-family: "source code pro", monospace;
+	color: #0f0;
+	font-family: "source code pro", monospace;
 }
 
 .contact-details a {
-  color: #0f0;
-  text-decoration: none;
+	color: #0f0;
+	text-decoration: none;
 }
 
-.contact-form input, .contact-form textarea, .contact-form button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #0f0; /* Matrix green border */
-    background: transparent;
-    color: #0f0; /* Matrix green text */
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #0f0; /* Matrix green border */
+	background: transparent;
+	color: #0f0; /* Matrix green text */
 }
 
 .contact-form button {
-    cursor: pointer;
-    background-color: #0f0; /* Matrix green background */
-    color: black;
-    transition: all 0.3s ease-in-out;
+	cursor: pointer;
+	background-color: #0f0; /* Matrix green background */
+	color: black;
+	transition: all 0.3s ease-in-out;
 }
 
 .contact-form button:hover {
-    background-color: #0e0e0e;
-    color: #0f0;
+	background-color: #0e0e0e;
+	color: #0f0;
+}
+
+/* Mobile Responsive */
+
+/* Base styles for mobile (small screens) */
+@media only screen and (max-width: 768px) {
+	/* Adjust overall layout for small screens */
+	body,
+	html {
+		overflow: auto;
+	}
+
+	/* Adjust the main tiles for smaller screens */
+	.tile {
+		width: 90%;
+		max-width: none;
+		padding: 20px;
+		margin-top: 20px; /* Add some top margin for breathing room */
+		position: static; /* Use static instead of absolute for natural document flow */
+		transform: none; /* Remove transform properties */
+	}
+
+	/* Adjust the layout of the contact section */
+	#contact-section-tile {
+		flex-direction: column; /* Stack the columns on top of each other */
+	}
+
+	.contact-details,
+	.contact-form {
+		width: 100%; /* Full width for small screens */
+		padding: 10px;
+	}
+
+	/* Adjust the profile tile size */
+	#profile-tile {
+		top: 10%; /* Adjust top position */
+		left: 50%;
+		transform: translateX(-50%); /* Only horizontally center */
+	}
+
+	/* Reduce font sizes for smaller screens */
+	h1,
+	h2,
+	p,
+	a,
+	button {
+		font-size: smaller; /* Adjust the font-size to smaller or a specific size */
+	}
+
+	/* Adjust swiper container for smaller screens */
+	.swiper-container {
+		padding: 0;
+	}
+
+	.swiper-slide {
+		width: 100%; /* Full width slides */
+		height: auto; /* Adjust height automatically */
+	}
+
+	/* Hide arrows or other navigational elements not needed on small screens */
+	.arrow-icon {
+		display: none;
+	}
+
+	/* Adjustments for the form inputs and buttons for better touch targets */
+	.contact-form input,
+	.contact-form textarea,
+	.contact-form button {
+		padding: 15px; /* Larger padding for better touch targets */
+		margin-bottom: 15px; /* Increase spacing */
+	}
 }
 
 /* Animations */
