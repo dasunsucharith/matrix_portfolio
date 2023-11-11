@@ -460,6 +460,11 @@ html {
 		height: 100%;
 	}
 
+	#matrix-canvas {
+		width: 100%;
+		height: 100%;
+	}
+
 	#profile-tile {
 		width: 70%;
 		max-width: 400px;
@@ -468,8 +473,8 @@ html {
 	#about-section-tile {
 		width: 70%;
 		max-width: 400px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+		margin-top: 20px;
+		margin-bottom: 20px;
 	}
 
 	.about-columns {
