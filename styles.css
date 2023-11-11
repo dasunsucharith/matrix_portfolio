@@ -488,14 +488,14 @@ html {
 
 	.left-column img {
 		width: 100%;
-		max-width: 125px; /* Adjust size as needed */
-		border-radius: 10px; /* Optional for rounded corners */
-		margin-bottom: 20px;
+		max-width: 125px !important; /* Adjust size as needed */
+		border-radius: 10px !important; /* Optional for rounded corners */
+		margin-bottom: 20px !important;
 	}
 
 	.social-media-links a {
 		/* Style your social media links here */
-		margin-right: 0px;
+		margin-right: 0px !important;
 	}
 }
 
