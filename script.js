@@ -260,5 +260,12 @@ var swiper = new Swiper(".swiper-container", {
 	pagination: {
 		el: ".swiper-pagination",
 		clickable: true,
-	},
+    },
+    breakpoints: {
+        // when window width is <= 768px
+        768: {
+            slidesPerView: 1,
+            spaceBetween: 10
+        },
+    }
 });

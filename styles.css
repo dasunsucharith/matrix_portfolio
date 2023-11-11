@@ -480,6 +480,11 @@ html {
 		max-width: 400px;
 	}
 
+  #portfolio-section-tile {
+    width: 70%;
+    max-width: 400px;
+  }
+
 	.about-columns {
 		flex-direction: column;
 		text-align: center;
