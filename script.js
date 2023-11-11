@@ -1,205 +1,235 @@
-    document.addEventListener('DOMContentLoaded', () => {
-        const canvas = document.getElementById('matrix-canvas');
-        const context = canvas.getContext('2d');
+document.addEventListener("DOMContentLoaded", () => {
+	const canvas = document.getElementById("matrix-canvas");
+	const context = canvas.getContext("2d");
 
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+	canvas.width = window.innerWidth;
+	canvas.height = window.innerHeight;
 
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
+	window.addEventListener("resize", () => {
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight;
+	});
 
-        const katakana = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}';
-        const latin = katakana.split('');
+	const katakana =
+		"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}";
+	const latin = katakana.split("");
 
-        const fontSize = 16;
-        const columns = canvas.width / fontSize;
+	const fontSize = 16;
+	const columns = canvas.width / fontSize;
 
-        const rainDrops = [];
+	const rainDrops = [];
 
-        for (let x = 0; x < columns; x++) {
-        rainDrops[x] = 1;
-        }
+	for (let x = 0; x < columns; x++) {
+		rainDrops[x] = 1;
+	}
 
-        const draw = () => {
-        context.fillStyle = 'rgba(0, 0, 0, 0.05)';
-        context.fillRect(0, 0, canvas.width, canvas.height);
-        
-        context.fillStyle = '#0f0'; // Green text
-        context.font = fontSize + 'px monospace';
+	const draw = () => {
+		context.fillStyle = "rgba(0, 0, 0, 0.05)";
+		context.fillRect(0, 0, canvas.width, canvas.height);
 
-        for (let i = 0; i < rainDrops.length; i++) {
-            const text = latin[Math.floor(Math.random() * latin.length)];
-            context.fillText(text, i * fontSize, rainDrops[i] * fontSize);
-            
-            if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-            rainDrops[i] = 0;
-            }
-            rainDrops[i]++;
-        }
-        };
+		context.fillStyle = "#0f0"; // Green text
+		context.font = fontSize + "px monospace";
 
-        setInterval(draw, 30);
-        
-        // After a few seconds, hide the loading text and show the button
-        setTimeout(() => {
-            document.getElementById('loading').style.display = 'none';
-            document.getElementById('begin-btn').style.display = 'block';
-        }, 5000); // Adjust the time as needed (5000ms = 5 seconds)
+		for (let i = 0; i < rainDrops.length; i++) {
+			const text = latin[Math.floor(Math.random() * latin.length)];
+			context.fillText(text, i * fontSize, rainDrops[i] * fontSize);
 
-        const beginBtn = document.getElementById('begin-btn');
-        const aboutBtn = document.getElementById('about-icon');
-        const aboutBtn2 = document.getElementById('about-icon-2');
-        const homeBtn = document.getElementById('home-icon');
-        const skillBtn = document.getElementById('skill-icon');
-        const profileTile = document.getElementById('profile-tile');
-        const aboutTile = document.getElementById('about-section-tile');
-        const skillTile = document.getElementById('skill-section-tile');
-        const portfolioBtn = document.getElementById('portfolio-icon');
-        const portfolioTile = document.getElementById('portfolio-section-tile');
-        const skillBtn2 = document.getElementById('skill-icon-2');
-        const viewWorkBtn = document.getElementById('view-work');
+			if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+				rainDrops[i] = 0;
+			}
+			rainDrops[i]++;
+		}
+	};
 
-        beginBtn.addEventListener('click', () => {
-            // Hide the button
-            beginBtn.style.display = 'none';
+	setInterval(draw, 30);
 
-            // After a brief delay, display the profile tile
-            setTimeout(() => {
-            profileTile.style.display = 'block';
-            profileTile.style.opacity = 0;
-            profileTile.style.top = '60%'; // Start slightly off-center
+	// After a few seconds, hide the loading text and show the button
+	setTimeout(() => {
+		document.getElementById("loading").style.display = "none";
+		document.getElementById("begin-btn").style.display = "block";
+	}, 5000); // Adjust the time as needed (5000ms = 5 seconds)
 
-            // Animate the opacity and sliding effect
-            setTimeout(() => {
-                profileTile.style.opacity = 1;
-                profileTile.style.top = '50%'; // Slide to center
-            }, 100);
-            }, 500); // This delay allows for a smooth transition, adjust timing as needed
-        });
+	const beginBtn = document.getElementById("begin-btn");
+	const aboutBtn = document.getElementById("about-icon");
+	const aboutBtn2 = document.getElementById("about-icon-2");
+	const homeBtn = document.getElementById("home-icon");
+	const skillBtn = document.getElementById("skill-icon");
+	const profileTile = document.getElementById("profile-tile");
+	const aboutTile = document.getElementById("about-section-tile");
+	const skillTile = document.getElementById("skill-section-tile");
+	const portfolioBtn = document.getElementById("portfolio-icon");
+	const portfolioTile = document.getElementById("portfolio-section-tile");
+	const skillBtn2 = document.getElementById("skill-icon-2");
+	const viewWorkBtn = document.getElementById("view-work");
 
-        aboutBtn.addEventListener('click', () => {
+	beginBtn.addEventListener("click", () => {
+		// Hide the button
+		beginBtn.style.display = "none";
 
-            profileTile.style.display = 'none';
+		// After a brief delay, display the profile tile
+		setTimeout(() => {
+			profileTile.style.display = "block";
+			profileTile.style.opacity = 0;
+			profileTile.style.top = "60%"; // Start slightly off-center
 
-            setTimeout(() => {
-                aboutTile.style.display = "block";
-                aboutTile.style.opacity = 0;
-                aboutTile.style.top = '60%';
+			// Animate the opacity and sliding effect
+			setTimeout(() => {
+				profileTile.style.opacity = 1;
+				profileTile.style.top = "50%"; // Slide to center
+			}, 100);
+		}, 500); // This delay allows for a smooth transition, adjust timing as needed
+	});
 
-                setTimeout(() => {
-                    aboutTile.style.opacity = 1;
-                    aboutTile.style.top = '50%';
-                }, 100)
-            }, 500);
-        });
+	aboutBtn.addEventListener("click", () => {
+		profileTile.style.display = "none";
 
-        homeBtn.addEventListener('click', () => {
+		setTimeout(() => {
+			aboutTile.style.display = "block";
+			aboutTile.style.opacity = 0;
+			aboutTile.style.top = "60%";
 
-            aboutTile.style.display = 'none';
+			setTimeout(() => {
+				aboutTile.style.opacity = 1;
+				aboutTile.style.top = "50%";
+			}, 100);
+		}, 500);
+	});
 
-            setTimeout(() => {
-                profileTile.style.display = "block";
-                profileTile.style.opacity = 0;
-                profileTile.style.up = '60%';
+	homeBtn.addEventListener("click", () => {
+		aboutTile.style.display = "none";
 
-                setTimeout(() => {
-                    profileTile.style.opacity = 1;
-                    profileTile.style.up = '50%';
-                }, 100)
-            }, 500);
-        });
+		setTimeout(() => {
+			profileTile.style.display = "block";
+			profileTile.style.opacity = 0;
+			profileTile.style.up = "60%";
 
-        skillBtn.addEventListener('click', () => {
+			setTimeout(() => {
+				profileTile.style.opacity = 1;
+				profileTile.style.up = "50%";
+			}, 100);
+		}, 500);
+	});
 
-            aboutTile.style.display = 'none';
+	skillBtn.addEventListener("click", () => {
+		aboutTile.style.display = "none";
 
-            setTimeout(() => {
-                skillTile.style.display = "block";
-                skillTile.style.opacity = 0;
-                skillTile.style.up = '60%';
+		setTimeout(() => {
+			skillTile.style.display = "block";
+			skillTile.style.opacity = 0;
+			skillTile.style.up = "60%";
 
-                setTimeout(() => {
-                    skillTile.style.opacity = 1;
-                    skillTile.style.up = '50%';
-                }, 100)
-            }, 500);
-        });
+			setTimeout(() => {
+				skillTile.style.opacity = 1;
+				skillTile.style.up = "50%";
+			}, 100);
+		}, 500);
+	});
 
-        aboutBtn2.addEventListener('click', () => {
+	aboutBtn2.addEventListener("click", () => {
+		skillTile.style.display = "none";
 
-            skillTile.style.display = 'none';
+		setTimeout(() => {
+			aboutTile.style.display = "block";
+			aboutTile.style.opacity = 0;
+			aboutTile.style.top = "60%";
 
-            setTimeout(() => {
-                aboutTile.style.display = "block";
-                aboutTile.style.opacity = 0;
-                aboutTile.style.top = '60%';
+			setTimeout(() => {
+				aboutTile.style.opacity = 1;
+				aboutTile.style.top = "50%";
+			}, 100);
+		}, 500);
+	});
 
-                setTimeout(() => {
-                    aboutTile.style.opacity = 1;
-                    aboutTile.style.top = '50%';
-                }, 100)
-            }, 500);
-        });
+	portfolioBtn.addEventListener("click", () => {
+		skillTile.style.display = "none";
 
-        portfolioBtn.addEventListener('click', () => {
+		setTimeout(() => {
+			portfolioTile.style.display = "block";
+			portfolioTile.style.opacity = 0;
+			portfolioTile.style.top = "60%";
 
-            skillTile.style.display = 'none';
+			setTimeout(() => {
+				portfolioTile.style.opacity = 1;
+				portfolioTile.style.top = "50%";
+			}, 100);
+		}, 500);
+	});
 
-            setTimeout(() => {
-                portfolioTile.style.display = "block";
-                portfolioTile.style.opacity = 0;
-                portfolioTile.style.top = '60%';
+	viewWorkBtn.addEventListener("click", () => {
+		profileTile.style.display = "none";
 
-                setTimeout(() => {
-                    portfolioTile.style.opacity = 1;
-                    portfolioTile.style.top = '50%';
-                }, 100)
-            }, 500);
-        });
+		setTimeout(() => {
+			portfolioTile.style.display = "block";
+			portfolioTile.style.opacity = 0;
+			portfolioTile.style.top = "60%";
 
-        viewWorkBtn.addEventListener('click', () => {
+			setTimeout(() => {
+				portfolioTile.style.opacity = 1;
+				portfolioTile.style.top = "50%";
+			}, 100);
+		}, 500);
+	});
 
-            profileTile.style.display = 'none';
+	skillBtn2.addEventListener("click", () => {
+		portfolioTile.style.display = "none";
 
-            setTimeout(() => {
-                portfolioTile.style.display = "block";
-                portfolioTile.style.opacity = 0;
-                portfolioTile.style.top = '60%';
+		setTimeout(() => {
+			skillTile.style.display = "block";
+			skillTile.style.opacity = 0;
+			skillTile.style.top = "60%";
 
-                setTimeout(() => {
-                    portfolioTile.style.opacity = 1;
-                    portfolioTile.style.top = '50%';
-                }, 100)
-            }, 500);
-        });
+			setTimeout(() => {
+				skillTile.style.opacity = 1;
+				skillTile.style.top = "50%";
+			}, 100);
+		}, 500);
+	});
 
-        skillBtn2.addEventListener('click', () => {
+	function downloadPDF() {
+		var a = document.createElement("a");
+		a.href = "assets/dasun_sucharith_cv.pdf";
+		a.download = "dasun_sucharith_cv.pdf";
+		document.body.appendChild(a);
+		a.click();
+		document.body.removeChild(a);
+	}
 
-            portfolioTile.style.display = 'none';
+	document
+		.getElementById("download-resume")
+		.addEventListener("click", downloadPDF);
 
-            setTimeout(() => {
-                skillTile.style.display = "block";
-                skillTile.style.opacity = 0;
-                skillTile.style.top = '60%';
+	
+    let slideIndex = 0;
+	const slides = document.getElementsByClassName("slide");
+	const totalSlides = slides.length;
 
-                setTimeout(() => {
-                    skillTile.style.opacity = 1;
-                    skillTile.style.top = '50%';
-                }, 100)
-            }, 500);
-        });
+	function moveSlides() {
+		for (let i = 0; i < slides.length; i++) {
+			slides[i].className = slides[i].className.replace(" active-slide", "");
+		}
 
-        function downloadPDF() {
-            var a = document.createElement('a');
-            a.href = 'assets/dasun_sucharith_cv.pdf';
-            a.download = 'dasun_sucharith_cv.pdf';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        }
+		slideIndex++;
+		if (slideIndex > totalSlides - 1) {
+			slideIndex = 0;
+		} else if (slideIndex < 0) {
+			slideIndex = totalSlides - 1;
+		}
 
-        document.getElementById('download-resume').addEventListener('click', downloadPDF);
-    });
+		slides[slideIndex].className += " active-slide";
 
+		// Adjust the slider container's `scrollLeft` to the active slide's offset
+		const sliderContainer = document.querySelector(".slider-container");
+		const activeSlide = slides[slideIndex];
+		sliderContainer.scrollLeft =
+			activeSlide.offsetLeft -
+			sliderContainer.offsetWidth / 2 +
+			activeSlide.offsetWidth / 2;
+
+		// Call this function again after 3 seconds
+		setTimeout(moveSlides, 3000);
+	}
+
+	// Initial call
+	moveSlides();
+
+});

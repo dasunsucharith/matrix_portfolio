@@ -1,167 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
-<title>Dasun Sucharith | Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
+        <title>Dasun Sucharith | Portfolio</title>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
 
-</head>
-<body>
+    </head>
+    <body>
 
-<div id="welcome-window">
-<canvas id="matrix-canvas"></canvas>
-<div id="loading">LOADING...</div>
+        <div id="welcome-window">
+            <canvas id="matrix-canvas"></canvas>
+            <div id="loading">LOADING...</div>
 
-<button id="begin-btn" style="display: none;">BEGIN</button>
+            <button id="begin-btn" style="display: none;">BEGIN</button>
 
-<!-- Profile Tile -->
-<div id="profile-tile" style="display: none;">
-    <h1>Dasun Sucharith</h1>
-    <p class="designation">Web Developer</p>
-    <p class="catchphrase">Crafting Responsive and Engaging Web Experiences</p>
-    <div class="button-container">
-      <button id="view-work">View My Work</button>
-      <button id="download-resume">Download Resume</button>
-    </div>
-    <!-- Arrow and "About" text -->
-    <a href="#about-section" id="about-icon" title="About">&#x25BC; About</a>
-    <!-- <p id="about-text">About</p> -->
-</div>
-
-<!-- About Section Tile -->
-<div id="about-section-tile" style="display: none;">
-    <!-- Up Arrow for returning to Profile Tile -->
-    <!-- <a href="#profile-tile" class="arrow-icon up-arrow" title="Back to profile">&#x25B2; Back</a> -->
-    <!-- <p id="about-text">Home</p> -->
-    <a href="#profile-tile" id="home-icon" title="Home">&#x25B2; Home</a>
-    
-
-    <h2>About Me</h2>
-
-    <div class="about-columns">
-        <div class="left-column">
-            <div class="social-media-links">
-                <!-- Icons or text links to your social media profiles here -->
-                <p>
-                    <span><a href="https://github.com/dasunsucharith" target="_blank" rel="noopener noreferrer">[Github]</a></span>
-                    <span><a href="https://www.linkedin.com/in/dasun-sucharith/" target="_blank" rel="noopener noreferrer">[LinkedIn]</a></span>
-                    <span><a href="https://www.facebook.com/dasun.sucharith/" target="_blank" rel="noopener noreferrer">[Facebook]</a></span>
-                </p>
+            <!-- Profile Tile -->
+            <div id="profile-tile" style="display: none;">
+                <h1>Dasun Sucharith</h1>
+                <p class="designation">Web Developer</p>
+                <p class="catchphrase">Crafting Responsive and Engaging Web Experiences</p>
+                <div class="button-container">
+                    <button id="view-work">View My Work</button>
+                    <button id="download-resume">Download Resume</button>
+                </div>
+                <!-- Arrow and "About" text -->
+                <a href="#about-section" id="about-icon" title="About">&#x25BC; About</a>
+                <!-- <p id="about-text">About</p> -->
             </div>
-            <img src="images/me.png" alt="Dasun Sucharith" id="my-photo">
-            <!-- Social Media Links -->
-            <div class="social-media-links">
-                <!-- Icons or text links to your social media profiles here -->
-                <p>
-                    <span><a href="https://www.instagram.com/dasunsucharith/" target="_blank" rel="noopener noreferrer">[Instagram]</a></span>
-                    <span><a href="https://www.youtube.com/channel/UCIgNRo3_Vb71hD4QRiz5jMg/" target="_blank" rel="noopener noreferrer">[Youtube]</a></span>
-                    <span><a href="https://twitter.com/dasun_sucharith" target="_blank" rel="noopener noreferrer">[Twitter]</a></span>
-                </p>
+
+            <!-- About Section Tile -->
+            <div id="about-section-tile" style="display: none;">
+                <!-- Up Arrow for returning to Profile Tile -->
+                <!-- <a href="#profile-tile" class="arrow-icon up-arrow" title="Back to profile">&#x25B2; Back</a> -->
+                <!-- <p id="about-text">Home</p> -->
+                <a href="#profile-tile" id="home-icon" title="Home">&#x25B2; Home</a>
+
+
+                <h2>About Me</h2>
+
+                <div class="about-columns">
+                    <div class="left-column">
+                        <div class="social-media-links">
+                            <!-- Icons or text links to your social media profiles here -->
+                            <p>
+                                <span><a href="https://github.com/dasunsucharith" target="_blank" rel="noopener noreferrer">[Github]</a></span>
+                                <span><a href="https://www.linkedin.com/in/dasun-sucharith/" target="_blank" rel="noopener noreferrer">[LinkedIn]</a></span>
+                                <span><a href="https://www.facebook.com/dasun.sucharith/" target="_blank" rel="noopener noreferrer">[Facebook]</a></span>
+                            </p>
+                        </div>
+                        <img src="images/me.png" alt="Dasun Sucharith" id="my-photo">
+                        <!-- Social Media Links -->
+                        <div class="social-media-links">
+                            <!-- Icons or text links to your social media profiles here -->
+                            <p>
+                                <span><a href="https://www.instagram.com/dasunsucharith/" target="_blank" rel="noopener noreferrer">[Instagram]</a></span>
+                                <span><a href="https://www.youtube.com/channel/UCIgNRo3_Vb71hD4QRiz5jMg/" target="_blank" rel="noopener noreferrer">[Youtube]</a></span>
+                                <span><a href="https://twitter.com/dasun_sucharith" target="_blank" rel="noopener noreferrer">[Twitter]</a></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="right-column">
+                        <p>
+                            Experienced Software Engineer with a demonstrated history
+                            of working in the information services industry. Skilled in
+                            Software Development, Web Development, Mobile App Development,
+                            Public Speaking, and Management.
+                            <br /><br />
+                            Experienced in Web development, comfortable with using frontend
+                            languages such as HTML, CSS, JavaScript, ReactJS, Angular JS,
+                            Vue Js, Next Js, Three JS, JQuery, Flutter, and Kotlin.
+                            <br /><br />
+                            Also comfortable with using backend languages such as Python,
+                            Node JS, PHP, SQL, Java, C#.net, C#. Also, I’m comfortable with
+                            programming languages like C, and C++.
+                            <br /><br />
+                            Worked and Experienced in WordPress Web Design and Development,
+                            Elementor, Bootstrap, and Tailwind.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Down Arrow for Skills Section -->
+                <!-- <a href="#skills-section" class="arrow-icon down-arrow" title="Skills">&#x25BC; Skills</a> -->
+                <a href="#about-section-tile" id="skill-icon" title="Skills">&#x25BC; Skills</a>
+                <!-- <p id="about-text">Skill</p> -->
             </div>
-        </div>
-        <div class="right-column">
-            <p>
-                Experienced Software Engineer with a demonstrated history 
-                of working in the information services industry. Skilled in 
-                Software Development, Web Development, Mobile App Development, 
-                Public Speaking, and Management.
-                <br/><br/>
-                Experienced in Web development, comfortable with using frontend 
-                languages such as HTML, CSS, JavaScript, ReactJS, Angular JS, 
-                Vue Js, Next Js, Three JS, JQuery, Flutter, and Kotlin.
-                <br/><br/>
-                Also comfortable with using backend languages such as Python, 
-                Node JS, PHP, SQL, Java, C#.net, C#. Also, I’m comfortable with 
-                programming languages like C, and C++.
-                <br/><br/>
-                Worked and Experienced in WordPress Web Design and Development, 
-                Elementor, Bootstrap, and Tailwind.
-            </p>
-        </div>
-    </div>
 
-    <!-- Down Arrow for Skills Section -->
-    <!-- <a href="#skills-section" class="arrow-icon down-arrow" title="Skills">&#x25BC; Skills</a> -->
-    <a href="#about-section-tile" id="skill-icon" title="Skills">&#x25BC; Skills</a>
-    <!-- <p id="about-text">Skill</p> -->
-</div>
+            <!-- Skills Section Tile -->
+            <div id="skill-section-tile" style="display: none;">
+                <a href="#about-section-tile" id="about-icon-2" title="About">&#x25B2; About</a>
 
-<!-- Skills Section Tile -->
-<div id="skill-section-tile" style="display: none;">
-    <a href="#about-section-tile" id="about-icon-2" title="About">&#x25B2; About</a>
+                <h2>Skills</h2>
 
-    <h2>Skills</h2>
+                <div class="skills-container">
+                    <div class="card">
+                        <h3>Basics</h3>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Javascript</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Frontend Frameworks</h3>
+                        <ul>
+                            <li>Bootstrap</li>
+                            <li>React</li>
+                            <li>Angular</li>
+                            <li>Wordpress</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Design</h3>
+                        <ul>
+                            <li>Figma</li>
+                            <li>Elementor</li>
+                            <li>kadence</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Backend</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>PHP</li>
+                            <li>C#</li>
+                            <li>Databases</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Backend Frameworks</h3>
+                        <ul>
+                            <li>Django</li>
+                            <li>Laravel</li>
+                            <li>ASP.NET</li>
+                            <li>Xamarin</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Extra</h3>
+                        <ul>
+                            <li>Git</li>
+                            <li>Github</li>
+                            <li>Media Query</li>
+                            <li>npm</li>
+                        </ul>
+                    </div>
+                </div>
 
-    <div class="skills-container">
-        <div class="card">
-            <h3>Basics</h3>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Javascript</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h3>Frontend Frameworks</h3>
-            <ul>
-                <li>Bootstrap</li>
-                <li>React</li>
-                <li>Angular</li>
-                <li>Wordpress</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h3>Design</h3>
-            <ul>
-                <li>Figma</li>
-                <li>Elementor</li>
-                <li>kadence</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h3>Backend</h3>
-            <ul>
-                <li>Python</li>
-                <li>PHP</li>
-                <li>C#</li>
-                <li>Databases</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h3>Backend Frameworks</h3>
-            <ul>
-                <li>Django</li>
-                <li>Laravel</li>
-                <li>ASP.NET</li>
-                <li>Xamarin</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h3>Extra</h3>
-            <ul>
-                <li>Git</li>
-                <li>Github</li>
-                <li>Media Query</li>
-                <li>npm</li>
-            </ul>
-        </div>
-    </div>
+                <a href="#portfolio-section-tile" id="portfolio-icon" title="Portfolio">&#x25BC; Portfolio</a>
+            </div>
 
-    <a href="#portfolio-section-tile" id="portfolio-icon" title="Portfolio">&#x25BC; Portfolio</a>
-</div>
+            <div id="portfolio-section-tile" style="display: none;">
+                <a href="#skill-section-title" id="skill-icon-2" title="Skills">&#x25B2; Skills</a>
 
-<div id="portfolio-section-tile" style="display: none;">
-    <a href="#skill-section-title" id="skill-icon-2" title="Skills">&#x25B2; Skills</a>
+                <h2>Portfolio</h2>
 
-    <h2>Portfolio</h2>
+                <div class="slider-container" center>
+                    <div class="slide" id="slide1">
+                        <img src="images/projects/bvistas.jpg" alt="Bvistas">
+                        <div class="slide-content">
+                            <h2>Business Vistas</h2>
+                            <a href="https://bvistas.com/" class="preview-button" target="_blank">Preview</a>
+                        </div>
+                    </div>
+                    <div class="slide" id="slide2">
+                        <img src="images/projects/Untitled design.jpg" alt="Ahasa">
+                        <div class="slide-content">
+                            <h2>Ahasa</h2>
+                            <a href="https://ahasa.io" class="preview-button" target="_blank">Preview</a>
+                        </div>
+                    </div>
+                    <div class="dots-container">
+                        <!-- Dots are generated by JavaScript -->
+                    </div>
+                </div>
 
-    <a href="#contact-section-tile" id="contact-icon" title="Contact">&#x25BC; Contact</a>
-</div>
+                <a href="#contact-section-tile" id="contact-icon" title="Contact">&#x25BC; Contact</a>
+            </div>
 
-<script src="script.js"></script>
+            <script src="script.js"></script>
 
-</body>
+    </body>
 </html>
