@@ -452,7 +452,13 @@ html {
 @media only screen and (max-width: 768px) {
 	/* Adjust overall layout for small screens */
 
-	
+	#welcome-window {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		background-color: #000;
+	}
+  
 }
 
 /* Animations */
