@@ -468,6 +468,17 @@ html {
 	#about-section-tile {
 		width: 70%;
 		max-width: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+	}
+
+	.about-columns {
+		flex-direction: column;
+	}
+
+	.left-column,
+	.right-column {
+		width: 100%;
 	}
 }
 
