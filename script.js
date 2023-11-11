@@ -61,6 +61,10 @@ document.addEventListener("DOMContentLoaded", () => {
 	const portfolioTile = document.getElementById("portfolio-section-tile");
 	const skillBtn2 = document.getElementById("skill-icon-2");
 	const viewWorkBtn = document.getElementById("view-work");
+	const contactBtn = document.getElementById("contact-icon");
+	const portfolioBtn2 = document.getElementById("portfolio-icon-2");
+	const contactTile = document.getElementById("contact-section-tile");
+	const homeBtn2 = document.getElementById("home-icon-2");
 
 	beginBtn.addEventListener("click", () => {
 		// Hide the button
@@ -185,6 +189,51 @@ document.addEventListener("DOMContentLoaded", () => {
 		}, 500);
 	});
 
+	contactBtn.addEventListener("click", () => {
+		portfolioTile.style.display = "none";
+
+		setTimeout(() => {
+			contactTile.style.display = "block";
+			contactTile.style.opacity = 0;
+			contactTile.style.top = "60%";
+
+			setTimeout(() => {
+				contactTile.style.opacity = 1;
+				contactTile.style.top = "50%";
+			}, 100);
+		}, 500);
+	});
+
+	portfolioBtn2.addEventListener("click", () => {
+		contactTile.style.display = "none";
+
+		setTimeout(() => {
+			portfolioTile.style.display = "block";
+			portfolioTile.style.opacity = 0;
+			portfolioTile.style.top = "60%";
+
+			setTimeout(() => {
+				portfolioTile.style.opacity = 1;
+				portfolioTile.style.top = "50%";
+			}, 100);
+		}, 500);
+	});
+
+	homeBtn2.addEventListener("click", () => {
+		contactTile.style.display = "none";
+
+		setTimeout(() => {
+			profileTile.style.display = "block";
+			profileTile.style.opacity = 0;
+			profileTile.style.top = "60%";
+
+			setTimeout(() => {
+				profileTile.style.opacity = 1;
+				profileTile.style.top = "50%";
+			}, 100);
+		}, 500);
+	});
+
 	function downloadPDF() {
 		var a = document.createElement("a");
 		a.href = "assets/dasun_sucharith_cv.pdf";
@@ -197,7 +246,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	document
 		.getElementById("download-resume")
 		.addEventListener("click", downloadPDF);
-
 });
 
 var swiper = new Swiper(".swiper-container", {
