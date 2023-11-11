@@ -451,10 +451,6 @@ html {
 /* Base styles for mobile (small screens) */
 @media only screen and (max-width: 768px) {
 	/* Adjust overall layout for small screens */
-	body,
-	html {
-		overflow: auto;
-	}
 
 	
 }
