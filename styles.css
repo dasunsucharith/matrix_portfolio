@@ -473,17 +473,33 @@ html {
 	#about-section-tile {
 		width: 70%;
 		max-width: 400px;
-		margin-top: 20px;
-		margin-bottom: 20px;
 	}
 
 	.about-columns {
 		flex-direction: column;
+		text-align: center;
 	}
 
 	.left-column,
 	.right-column {
 		width: 100%;
+		justify-content: left;
+	}
+
+	.left-column img {
+		width: 100%;
+		max-width: 150px; /* Adjust size as needed */
+		border-radius: 10px; /* Optional for rounded corners */
+		margin-bottom: 10px;
+	}
+
+	.social-media-links a {
+		/* Style your social media links here */
+		text-decoration: none;
+		color: #0f0;
+		margin-right: 5px;
+		transition: color 0.3s ease;
+		opacity: 0.3s ease;
 	}
 }
 
