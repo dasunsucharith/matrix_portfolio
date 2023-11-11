@@ -485,6 +485,11 @@ html {
 		max-width: 400px;
 	}
 
+	#contact-section-tile {
+		width: 70%;
+		max-width: 400px;
+	}
+
 	.about-columns {
 		flex-direction: column;
 		text-align: center;
@@ -543,6 +548,19 @@ html {
 		background-size: cover;
 		width: 300px;
 		height: 250px;
+	}
+
+	.contact-columns {
+		flex-direction: column;
+	}
+
+  .contact-details {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+	.contact-form {
+		padding: 10px;
 	}
 }
 
