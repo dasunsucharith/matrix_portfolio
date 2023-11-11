@@ -249,8 +249,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 var swiper = new Swiper(".swiper-container", {
-	slidesPerView: 3,
-	spaceBetween: 20,
+	slidesPerView: 1,
+	spaceBetween: 10,
 	centeredSlides: true,
 	loop: true,
 	autoplay: {
@@ -260,12 +260,20 @@ var swiper = new Swiper(".swiper-container", {
 	pagination: {
 		el: ".swiper-pagination",
 		clickable: true,
-    },
-    breakpoints: {
-        // when window width is <= 768px
-        768: {
-            slidesPerView: 1,
-            spaceBetween: 10
-        },
-    },
+	},
+	breakpoints: {
+		// when window width is <= 768px
+		640: {
+			slidesPerView: 1,
+			spaceBetween: 10,
+		},
+		768: {
+			slidesPerView: 3,
+			spaceBetween: 20,
+		},
+		1024: {
+			slidesPerView: 3,
+			spaceBetween: 30,
+		},
+	},
 });
