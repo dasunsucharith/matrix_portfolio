@@ -198,38 +198,19 @@ document.addEventListener("DOMContentLoaded", () => {
 		.getElementById("download-resume")
 		.addEventListener("click", downloadPDF);
 
-	
-    let slideIndex = 0;
-	const slides = document.getElementsByClassName("slide");
-	const totalSlides = slides.length;
+});
 
-	function moveSlides() {
-		for (let i = 0; i < slides.length; i++) {
-			slides[i].className = slides[i].className.replace(" active-slide", "");
-		}
-
-		slideIndex++;
-		if (slideIndex > totalSlides - 1) {
-			slideIndex = 0;
-		} else if (slideIndex < 0) {
-			slideIndex = totalSlides - 1;
-		}
-
-		slides[slideIndex].className += " active-slide";
-
-		// Adjust the slider container's `scrollLeft` to the active slide's offset
-		const sliderContainer = document.querySelector(".slider-container");
-		const activeSlide = slides[slideIndex];
-		sliderContainer.scrollLeft =
-			activeSlide.offsetLeft -
-			sliderContainer.offsetWidth / 2 +
-			activeSlide.offsetWidth / 2;
-
-		// Call this function again after 3 seconds
-		setTimeout(moveSlides, 3000);
-	}
-
-	// Initial call
-	moveSlides();
-
+var swiper = new Swiper(".swiper-container", {
+	slidesPerView: 3,
+	spaceBetween: 20,
+	centeredSlides: true,
+	loop: true,
+	autoplay: {
+		delay: 2500,
+		disableOnInteraction: false,
+	},
+	pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+	},
 });
